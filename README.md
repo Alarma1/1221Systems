@@ -1,40 +1,33 @@
-# vue-project
+[Демо](https://alarma1.github.io/1221Systems-build/)  
+[Ссылка на проект](https://github.com/Alarma1/1221Systems)
+# Тестовое техническое задание для вакансии Junior/Trainee frontend-developer  
+##	Требуется развернуть VUE3(composition api) приложение, используя инструменты сборки Vite, указав все необходимые параметры из основного стека при развертывании проекта.  
+## Основные роуты приложения:  
+- Главная страница  
+- Страница списка постов  
+- Страница поста
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
+## Главная страница:
+На главной странице должен быть расположен блок с основной навигацией по сайту. В навигации должны находиться ссылки(можно кнопки) на следующие роуты:
+- Страница списка постов
+ 
+## Страница списка постов:
+Содержит блок “breadcrumbs” с активной ссылкой на главную и отображением текущей страницы. Структура: Главная / Список постов
+Содержит блок списка постов.
+В блоке списка постов по клику левой клавишей мыши должен осуществляться переход на страницу поста. По клику правой кнопкой мыши, пост должен удаляться из списка(без запроса на сервер)
+ 
+## Страница поста:
+Содержит блок “breadcrumbs” с активными ссылками на главную страницу, страницу списка постов и отображением текущей страницы.
+Структура: Главная / Список постов / Пост № {postnumber}
+## Содержит блок с телом поста, в котором:
+- Заголовок поста
+- Тело поста
+- Блок «об авторе»
+## В блоке об авторе получаем информацию о пользователе по полю userId в посте через эндпоинт  HYPERLINK https://jsonplaceholder.typicode.com/users/{userId} и отображаем ее в следующей структуре:
+- Имя пользователя
+- Email
+- Телефон
+- Website
+ 
+Для всех страниц данные необходимо получать с сервиса https://jsonplaceholder.typicode.com/, получаемая сущность должна быть типизирована.
+Если на странице используются какие-либо собственные стили, они должны быть написаны исключительно с использованием модульного scss. Общие стили могут быть использованы только для Reset’а браузерных стилей или подгрузки своих шрифтов. На уровне компонента разрешается использование исключительно модульных стилей.
