@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: '/1221Systems-build/'
+    publicPath: '/1221Systems/'
 }
